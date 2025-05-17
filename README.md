@@ -1,3 +1,19 @@
+# About
+This is a minimal repo that reproduces a bug with the storybook mix-in of `eslint-config-spartan`. Attempting to lint while using the mix-in produces the following error:
+```
+A configuration object specifies rule "storybook/no-uninstalled-addons", but could not find plugin "storybook".
+
+Common causes of this problem include:
+
+1. The "storybook" plugin is not defined in your configuration file.
+2. The "storybook" plugin is not defined within the same configuration object in which the "storybook/no-uninstalled-addons" rule is applied.
+```
+
+## Steps to reproduce
+1. Clone the repo
+2. Run `yarn install`
+3. Run `yarn lint`
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
